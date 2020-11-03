@@ -18,9 +18,9 @@ class Notes
     # In Hz - Based on 440 Hz scale tuning - octave -2
     BASE_FREQUENCIES = [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87]
 
-    def initialize
-      @name = NAMES[0]
-      @octave = NOTES[3][0]
+    def initialize(name= NAMES[0], octave= NOTES[3][0])
+      @name = name
+      @octave = octave
       @midi_note_number = NOTES[3][1]
       @frequency = note_frequency_calculator(BASE_FREQUENCIES[0], 12)
     end
