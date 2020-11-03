@@ -15,7 +15,7 @@ class Notes
 
     NAMES = ["C","C#","Db","D","D#","Eb","E","F","F#","Gb","G","G#","Ab","A","A#","Bb","B"]
 
-    # In Hz - Based on 440 Hz scale tuning
+    # In Hz - Based on 440 Hz scale tuning - octave -2
     BASE_FREQUENCIES = [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87]
 
     def initialize
@@ -25,10 +25,17 @@ class Notes
       @frequency = note_frequency_calculator(BASE_FREQUENCIES[0], 12)
     end
 
+    # This takes a note frequency in Hz as a starting point and calculates the note frequency
+    # for another note - 'n' number of steps away from it.  Note ferquency is helpful in EDM and bass music
+    # production/composition
+    #
+    # @param [Numeric] note frequency starting point
+    # @param [Numeric] The number of steps away your target note is from the starting point
+    # @return [Numeric] The note frequency (in Hz)
     def note_frequency_calculator base_frequency, steps_to_next_note
+        # TODO: Add a multiplier for KHz
       @bf = base_frequency
       @steps = steps_to_next_note
-
       return (@bf * 1.059463094359 ** @steps).round(2)
     end
     
