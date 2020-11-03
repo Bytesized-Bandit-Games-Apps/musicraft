@@ -22,14 +22,14 @@ class Notes
       @name = NAMES[0]
       @octave = NOTES[3][0]
       @midi_note_number = NOTES[3][1]
-      @frequency = note_frequency_calculator(BASE_FREQUENCIES[0], 12).round(2)
+      @frequency = note_frequency_calculator(BASE_FREQUENCIES[0], 12)
     end
 
     def note_frequency_calculator base_frequency, steps_to_next_note
       @bf = base_frequency
       @steps = steps_to_next_note
 
-      return @bf * 1.059463094359 ** @steps
+      return (@bf * 1.059463094359 ** @steps).round(2)
     end
     
 end
