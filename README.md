@@ -1,16 +1,22 @@
 # Musicraft
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/musicraft`. To experiment with that code, run `bin/console` for an interactive prompt.
+TODO: Delete this and describe your gem
 
-TODO: Delete this and the text above, and describe your gem
+I'm an Electronic Music Producer, specifically in the EDM realm, with professionally signed releases. Electronic music production (especially in bass music) has some unique needs from a compositional perspective. I'm developing a mobile app (http://www.rubymotion.com/) as a compositional tool.  This Gem will handle the music theory side of the app.  There are some existing music theory gems out there, but I need something much "lighter" in size and scope that also encompasses the unique needs of EDM composition.
+
+Musicraft is focused on presenting the scales and the songwriting chords of a specific key.  
+
+It will also include note frequencies specific to the bass range to prevent phase cancellation in your audio productions. (Frequencies for equal-tempered scale, A4 = 440 Hz)
+
+Notes are based on MIDI Note numbers (https://computermusicresource.com/midikeys.html)
+
+Middle C is C3 (MIDI Note #60)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'musicraft'
-```
+    gem 'musicraft'
 
 And then execute:
 
@@ -32,5 +38,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/musicraft.
+Bug reports and pull requests are welcome on GitHub at https://github.com/t0dd/musicraft.
 
