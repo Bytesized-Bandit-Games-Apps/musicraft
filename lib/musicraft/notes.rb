@@ -27,7 +27,7 @@ class Notes
 
     # This takes a note frequency in Hz as a starting point and calculates the note frequency
     # for another note - 'n' number of steps away from it.  Note ferquency is helpful in EDM and bass music
-    # production/composition
+    # production/composition - reference:  https://pages.mtu.edu/~suits/notefreqs.html
     #
     # @param [Numeric] note frequency starting point
     # @param [Numeric] The number of steps away your target note is from the starting point

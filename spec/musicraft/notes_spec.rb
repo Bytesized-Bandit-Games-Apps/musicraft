@@ -25,4 +25,7 @@ describe 'Notes' do
         expect(@notes_tester.frequency).to be
         expect(@notes_tester.frequency).to eq(32.7)
     end
+    it 'can calculate the frequency of any note' do
+        
+    end
 end
