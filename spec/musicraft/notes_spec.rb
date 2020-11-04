@@ -5,6 +5,7 @@ describe 'Notes' do
 
     before :each do
         @notes_tester = Notes.new
+        @test2 = Notes.new("x", -4)
     end
 
     it 'has a name with a default value' do
@@ -25,7 +26,6 @@ describe 'Notes' do
         expect(@notes_tester.frequency).to be
         expect(@notes_tester.frequency).to eq(32.7)
     end
-    it 'can calculate the frequency of any note' do
-        
-    end
+
+    it 'can calculate the frequency of any note'
 end
