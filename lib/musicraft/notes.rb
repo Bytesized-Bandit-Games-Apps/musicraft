@@ -27,7 +27,7 @@ class Notes
     BASE_FREQUENCIES = [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87]
 
     def initialize(name= NAMES[0], octave= NOTES[3][0])
-      @name = name.upcase
+      @name = name.capitalize
       @octave = octave
       @midi_note_number = NOTES[3][1]
       @frequency = note_frequency_calculator(BASE_FREQUENCIES[0], 12)
@@ -54,19 +54,14 @@ class Notes
     # @param [String] note name
     def notes_name_validator name
         @name = name
-        if (NAMES.any? {|n| n == @name}) == false
+        if (NAMES.any? {|n| n.eql?(@name)}) == false
             puts "You need to enter a legitimate note name"
+            return false
+        else
+            return true
         end
     end
-    # A utility method for development to validate octave ranges. Returns nil if all is good.
-    # prints error message to console if not
-    #
-    # @param [Numeric] octave
-    def notes_octave_validator octave
-        @octave = octave
-        if ( @octave < -2 && @octave > 8) == true
-            puts "You need to enter a legitimate octave number"
-        end
-    end
+   
+    
     
 end
